@@ -1,7 +1,7 @@
 const form = document.getElementById('search-form');
 const searchField = document.getElementById('search-keyword');
 const responseContainer = document.getElementById('response-container');
-const container=document.getElementById('container');
+
 let searchedForText;
 
 var submit = document.querySelector("#submit");
@@ -42,15 +42,15 @@ function addNews(data) {
   const snippet = data.snippet;
   console.log(data);
   // const article = data.docs[0];
-  let h1 = document.createElement('h1');
-  h1.className='titleArticle';
-  h1.innerText = title;
-  let li = document.createElement('li');
-  li.className = 'articleClass';
-  li.innerText = snippet;
+  let h5 = document.createElement('h5');
+  h5.className='titleArticle';
+  h5.innerText = title;
+  let h6 = document.createElement('h6');
+  h6.className = 'articleClass';
+  h6.innerText = snippet;
 
-  container.appendChild(h1);
-  responseContainer.appendChild(li);
+  responseContainer.appendChild(h5);
+  responseContainer.appendChild(h6);
 
 }
 
