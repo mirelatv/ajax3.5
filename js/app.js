@@ -14,7 +14,7 @@ form.addEventListener('submit',function(e){
 
 function getNews(){
     const articleRequest = new XMLHttpRequest();
-    articleRequest.open('GET',`http://api.nytimes.com/svc/search/v2/articlesearch.json?q=$(searchForText)&api-Key=<2c03c764d6cc430496402090c67d443b>`);
+    articleRequest.open('GET',`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedFordText}&api-key=2c03c764d6cc430496402090c67d443b`);
     articleRequest.onload=addNews;
     articleRequest.onerror=handlelError;
     articleRequest.send();
@@ -31,6 +31,6 @@ function addNews(){
  let li = document.createElement('li');
  li.className='articleClass';
  li.innerText = snipped;
- responseContainer.appendChild('li')
+ responseContainer.appendChild(li);
 }
 
