@@ -26,11 +26,12 @@ function addNews(){
  const data = JSON.parse(this.responseText);
  console.log(data);
  const article = data.response.docs[0];
+ console.log(article);
  const title= article.headline.main;
- const snipped= article.snipped;
+ const snippet = article.snippet;
  let li = document.createElement('li');
  li.className='articleClass';
- li.innerText = snipped;
+ li.innerText = snippet;
  responseContainer.appendChild(li);
 }
 
